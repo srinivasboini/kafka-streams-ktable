@@ -1,0 +1,20 @@
+kafka:
+  streams:
+    applicationId : kafka-streams-1
+    bootstrapServers: pkc-ldvr1.asia-southeast1.gcp.confluent.cloud:9092
+    securityProtocol: SASL_SSL
+    numberOfThreads: 4
+    saslMechanism: PLAIN
+    saslJaasConfig : "org.apache.kafka.common.security.plain.PlainLoginModule required username='${CLUSTER_API_KEY}' password='${CLUSTER_API_SECRET}';"
+    schemaRegistryUrl: https://psrc-znpo0.ap-southeast-2.aws.confluent.cloud
+    schemaAuth: USER_INFO
+    schemaAuthInfo: ${SR_API_KEY}:${SR_API_SECRET}
+server:
+  port: 0
+
+#logging:
+#  level:
+#    org.springframework.kafka: DEBUG
+#    org.apache.kafka: DEBUG
+#    org: INFO
+
