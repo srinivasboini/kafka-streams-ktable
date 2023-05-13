@@ -24,6 +24,7 @@ public class StreamProcessor {
     private final Properties streamProps ;
 
     private final Predicate<String, String> predicate = (s, s2) -> "HDFC".equals(s) || "TCS".equals(s) ;
+
     /**
      * Build topology and start stream.
      */
